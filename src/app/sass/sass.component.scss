@@ -1,0 +1,71 @@
+//@import "filename";
+
+$fz:100px;
+$hz:100px;
+$color_1: #000;
+$color_2: #fff;
+
+
+
+
+%tplBorder{
+  border-bottom: 5px dashed red;
+}
+
+@mixin fontZ($f,$c){
+  font-size: $f;
+  color: $c;
+
+}
+
+
+
+
+
+
+
+.block{
+  width: 300px/960px*100%;
+  padding: 30px;
+  //font-size: 50px;
+  line-height:$fz;
+  >p{
+    color: red;
+  }
+  span{
+    color: green;
+  }
+
+
+}
+
+.link{
+  color: #fc8c03;
+  text-decoration: none;
+  .block &{
+    font-size: $fz;
+  }
+
+  &:hover{
+    color: green;
+  }
+  &:before{
+    content: "www.";
+  }
+  &:after{
+    content: '.com';
+  }
+  &:active{
+
+  }
+  &:focus{}
+  @extend %tplBorder;
+}
+
+.link-2{
+
+@include fontZ(200px,green);
+  //font-size: 200px;
+  @extend %tplBorder;
+  border-bottom: 5px dashed coral;
+}

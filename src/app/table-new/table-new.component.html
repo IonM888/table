@@ -1,0 +1,77 @@
+<p>table-new works!</p>
+
+<form>
+  <p>Please select your array:</p>
+
+  <div>
+    <input type="radio" id="firstName"
+           name="selectTable" value="arrayTable"  checked (change)="selectArray('arrayTable', 'firstName')">
+    <label for="firstName">arrayTable</label>
+
+    <input type="radio" id="Name"
+           name="selectTable" value="oldClients" (change)="selectArray('oldClients', 'Name')">
+    <label for="Name">oldClients</label>
+
+    <input type="radio" id="fName"
+           name="selectTable" value="newClients"   (change)="selectArray('newClients', 'fName')">
+    <label for="fName">newClients</label>
+  </div>
+
+
+
+</form>
+
+
+
+
+<div  >
+  <div class="checkBox" >
+
+    <p>Select Rows</p>
+    <li *ngFor="let item of dynamicallyArray; let i=index" id="nameS" >
+
+      <input type="checkbox" checked  (click)="hideRow(item.id)"  >
+
+      <label for="nameS">{{item[tableKey]}}</label>
+
+    </li>
+
+  </div>
+
+ <div class="checkBox">
+   <p>Select Cols</p>
+  <li *ngFor="let item of objectKeys(columnsToShow); " id="keys">
+
+    <input type="checkbox"  [checked]="item" (click)="hideColumns(item)" >
+    <label for="keys">{{item}}</label>
+  </li>
+ </div>
+
+
+</div>
+
+
+<table class="tableN" border="1px">
+
+<ng-container  *ngFor="let item of dynamicallyArray; let i=index " >
+
+  <tr *ngIf="entriesToShow[item.id]" >
+
+    <ng-container *ngFor="let itemNew of objectKeys(columnsToShow) ">
+
+      <td *ngIf="columnsToShow[itemNew]">
+        {{ item[itemNew]}}
+      </td>
+    </ng-container>
+
+  </tr>
+
+
+
+
+
+
+</ng-container>
+</table>
+
+

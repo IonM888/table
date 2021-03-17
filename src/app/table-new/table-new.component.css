@@ -1,0 +1,13 @@
+
+table{
+  border: 2px  solid blue;
+  padding: 0px;
+
+  margin: 0 auto;
+  width: 50%;
+
+}
+.checkBox{
+  display: inline-block;
+  padding: 20px;
+}

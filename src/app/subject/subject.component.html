@@ -1,0 +1,14 @@
+<p>subject works!</p>
+
+
+<input type="number"  #myInput (input)="toMath(myInput.value)"  >
+
+<div  *ngIf="displayError" style="color: red">Please entry positive number!!!</div>
+
+<div *ngIf="displayTrue">
+  <p> {{counterValue}} Power number : {{counterPow$ | async}}</p>
+  <p> {{counterValue}} Radical number: {{counterSqrt$ |async}}</p>
+  <p> {{counterValue}} Euro-Lei: {{counterEur$ | async}}</p>
+  <p> {{counterValue}} Km to m: {{counterKm$ |async}}</p>
+</div>
+
