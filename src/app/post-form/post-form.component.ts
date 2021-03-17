@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostFormComponent implements OnInit {
 
+  title=''
+  text=''
+
   constructor() { }
 
   ngOnInit(): void {
