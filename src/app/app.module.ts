@@ -15,6 +15,8 @@ import { SubjectComponent } from './subject/subject.component';
 import { TaskComponent } from './task/task.component';
 import { SassComponent } from './sass/sass.component';
 import {FormsModule} from "@angular/forms";
+import { PostFormComponent } from './post-form/post-form.component';
+import { PostComponent } from './post/post.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import {FormsModule} from "@angular/forms";
     CounterComponent,
     SubjectComponent,
     TaskComponent,
-    SassComponent
+    SassComponent,
+    PostFormComponent,
+    PostComponent
   ],
     imports: [
         BrowserModule,
