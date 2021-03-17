@@ -22,6 +22,10 @@ export class AppComponent implements OnInit {
     {title:'my second Title',text:'Example text component second',id:2},
     {title:'my third Title',text:'Example text component third',id:3}
   ]
+  updatePosts(event){
+    this.posts.unshift(event)
+
+  }
 
   students: Student[] = [];
 

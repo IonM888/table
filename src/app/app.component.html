@@ -50,7 +50,12 @@
   <h1>Angular Components</h1>
 
 
-  <app-post-form></app-post-form>
+  <app-post-form
+(onAdd)="updatePosts($event)"
+  >
+
+
+  </app-post-form>
   <hr>
 
   <app-post
